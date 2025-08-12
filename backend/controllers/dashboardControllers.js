@@ -30,7 +30,7 @@ const totalExpense = await Expense.aggregate([
 // Get income transactions in the last 60 days 
 const last60DaysIncomeTransactions = await Income.find({ 
     userId,
-    date: { $gte: new Date(Date.now()= 60 * 24 * 60 * 60 * 1000)},
+    date: { $gte: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000)},
  }).sort({ date: -1});
 
 
@@ -43,7 +43,7 @@ const incomeLast60Days = last60DaysIncomeTransactions.reduce(
 
 const last30DaysExpenseTransactions = await Expense.find({ 
     userId, 
-    date: { $gte: new Date(Date.now() = 30 * 24 * 60 * 60 * 1000)},
+    date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)},
     }).sort({ date: -1});
 
 // Get total expenses for last 30 days
@@ -71,9 +71,9 @@ const lastTransactions = [
 //Final Response
 res.json({
 totalBalance:
-(totalIncome [0]?.total || 0) (totalExpense [0]?.total || 0),
-totalIncome: totalIncome [0]?.total || 0,
-totalExpenses: totalExpense [0]?.total || 0,
+(totalIncome[0]?.total || 0) - (totalExpense[0]?.total || 0),
+totalIncome: totalIncome[0]?.total || 0,
+totalExpense: totalExpense[0]?.total || 0,
 last30DaysExpenses: {
 total: expensesLast30Days,
 transactions: last30DaysExpenseTransactions,
