@@ -12,10 +12,13 @@ import Income from "./pages/Dashboard/Income";
 import Expense from "./pages/Dashboard/Expense";
 import UserProvider from './context/userContext';
 import {Toaster} from "react-hot-toast";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 const App=()=>{
   return(
+    
     <UserProvider>
+       <DarkModeProvider>
     <div>
       <Router>
         <Routes>
@@ -37,7 +40,9 @@ const App=()=>{
 
     }}
     />
+    </DarkModeProvider>
     </UserProvider>
+    
   );
 };
 export default App;

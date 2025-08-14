@@ -7,7 +7,7 @@ const DashboardLayout = ({ children, activeMenu }) => {
     const { user } = useContext(UserContext);
     
     return (
-        <div className="">
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
             <Navbar activeMenu={activeMenu} />
             
             {user && (
