@@ -6,6 +6,8 @@ const {
 registerUser,
 loginUser,
 getUserInfo,
+googleLogin,
+googleSignup
 } = require("../controllers/authControllers");
 
 //Imports a custom middleware (uploadMiddleware) that uses multer to handle file uploads.
@@ -31,6 +33,9 @@ router.post("/login", loginUser);
 // @access  Protected
 router.get("/getUser", protect, getUserInfo);
 
+
+router.post('/google-login', googleLogin);
+router.post('/google-signup', googleSignup);
 
 // ==========================
 //  Image Upload Route
