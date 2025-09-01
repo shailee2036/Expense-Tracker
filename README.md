@@ -81,7 +81,7 @@ JWT_SECRET=your_jwt_secret_key
 
 **Start Backend**
 ```bash
-npm start
+npm run dev
 ```
 
 ---
@@ -118,9 +118,9 @@ npm run dev
 ## 📈 Future Plans  
 
 ### ☁ **Cloud Migration**  
-- Migrate the local React-based expense tracker to AWS Cloud to enhance scalability & performance.  
-- Transition from MongoDB to **AWS DynamoDB** for optimized data retrieval.  
-- Deploy backend & frontend on **AWS EC2** for reliable hosting.    
+- Migrate the local React-based expense tracker to AWS Cloud to enhance scalability & performance. ✅
+- Transition from MongoDB to **AWS DynamoDB** for optimized data retrieval.✅
+- Deploy backend & frontend on **AWS EC2** for reliable hosting. ✅   
 
 ### 🤖 **AI & LLM Integration**  
 - AI-based financial insights for **expense optimization**.  
