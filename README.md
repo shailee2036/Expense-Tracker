@@ -123,9 +123,7 @@ npm run dev
 - Deploy backend & frontend on **AWS EC2** for reliable hosting. ✅   
 
 ### 🤖 **AI & LLM Integration**  
-- AI-based financial insights for **expense optimization**.  
-- **Voice-based expense logging**.  
-- **Automated categorization** of expenses using AI.  
+- AI-based financial insights for **expense optimization**.  ✅
 
 ---
 
